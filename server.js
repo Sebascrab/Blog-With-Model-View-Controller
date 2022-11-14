@@ -12,13 +12,21 @@ const routes = require('./controllers');
 const sequelize = require('./config/connection');
 
 const app = express();
-const PORT = process.env.PORT || 3002;
+const PORT = process.env.PORT || 3001;
 
 
-// setting up sessions and secret:
-const session = {
+setting up sessions and secret:
+const sessionSetUp = {
     secret: 'Sebascrab',
-    cookie: {},
+    cookie: {
+
+        // session expires every 10 minutes:
+        expires: 10 * 60 * 1000,
+        secure: false,
+        sameSite: 'strict',
+        httpOnly: true,
+        
+    },
     resave: false,
     saveUninitiated: true,
     store: new SequelizeStore({
@@ -26,12 +34,12 @@ const session = {
     }),
 };
 
-app.use(session(session));
+app.use(session(sessionSetUp));
 
 
 
 // using handlebars: 
-const hbs = exbhbs.create({ helpers });
+const hbs = exphbs.create({ helpers });
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
