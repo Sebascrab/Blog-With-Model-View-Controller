@@ -15,17 +15,15 @@
             <div class="brandName is-size-1 has-text-info-light">Sebastian's Tech Blog</div>
           </a>
         </div>
-        <div class="navbar-menu" id="nav-links">
-          <div class="navbar-end">
-             <a class="navbar-item is-size-5 has-text-info-light">Dashboard</a>
-              <a class="navbar-item is-size-5 has-text-info-light">Sign Up</a>
-              {{#if loggedIn}}
-              <a class="navbar-item is-size-5 has-text-info-light">Login</a>
-              {{else}}
-              <a class="navbar-item is-size-5 has-text-info-light">Sign Out</a>
-              {{/if}}
-        </div>
-        </div>
+        {{#if loggedIn}}
+            <a href="/" class="navbar-item is-hoverable pt-1">Home</a>
+            <a href="/dashboard" class="navbar-item is-hoverable pt-1">Dashboard</a>
+            <a href="/dashboard/create/" class="navbar-item is-hoverable pt-1 mr-4">Create A Post</a>
+            <button id="logout" class="button is-info">logout</button>
+            {{else}}
+            <a href="/" class="navbar-item is-hoverable pt-1">Homepage</a>
+            <a href="/login" class="button is-info">Login</a>
+            {{/if}}
       </nav>
 
       {{{body}}}
@@ -38,5 +36,7 @@
           </p>
         </div>
       </footer>
+      {{#if loggedIn}}
+      <script src="/javascript/logout.js"></script>
 </body>
 </html>
