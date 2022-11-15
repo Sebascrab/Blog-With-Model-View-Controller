@@ -9,19 +9,34 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 </head>
 <body>
-    <div class="page-container">
-        <div class="home-page">
-            <nav class="navbar has-background-info-dark has-shadow">
-                <div class="navbar-brand">
-                    <div class="proj-name "> </div>
-                </div>
-            </nav>
+     <nav class="navbar has-background-info-dark">
+        <div class="navbar-brand">
+          <a class="navbar-item">
+            <div class="brandName is-size-1 has-text-info-light">Sebastian's Tech Blog</div>
+          </a>
         </div>
+        <div class="navbar-menu" id="nav-links">
+          <div class="navbar-end">
+             <a class="navbar-item is-size-5 has-text-info-light">Dashboard</a>
+              <a class="navbar-item is-size-5 has-text-info-light">Sign Up</a>
+              {{#if loggedIn}}
+              <a class="navbar-item is-size-5 has-text-info-light">Login</a>
+              {{else}}
+              <a class="navbar-item is-size-5 has-text-info-light">Sign Out</a>
+              {{/if}}
+        </div>
+        </div>
+      </nav>
 
-    </div>
-    <footer class="footer">
-        Made by Sebatian Tischner
-    </footer>
-    
+      {{{body}}}
+
+      <footer class="footer has-background-info-dark">
+        <div class="content has-text-info-light has-text-centered">
+          <p>
+            <strong class="content has-text-info-light">Sebastain's Tech Blog</strong> by Sebastian Tischner
+            
+          </p>
+        </div>
+      </footer>
 </body>
 </html>
