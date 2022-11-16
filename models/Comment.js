@@ -13,13 +13,13 @@ class Comment extends Model {}
 Comment.init(
     {
         id: {
-            type: Datatypes.INTEGER,
+            type: sequelize.INTEGER,
             allowNull: false,
             primaryKey: true,
             autoIncrement: true
         },
         post_id: {
-            type: Datatypes.INTEGER,
+            type: sequelize.INTEGER,
             allowNull: false, 
             references: {
                 model: 'post', 
@@ -27,7 +27,7 @@ Comment.init(
             }
         },
         user_id: {
-            type: Datatypes.INTEGER,
+            type: sequelize.INTEGER,
             allowNull: false, 
             references: {
                 model: 'user',
@@ -35,7 +35,7 @@ Comment.init(
             }
         },
         comment_text: {
-            type: Datatypes.STRING, 
+            type: sequelize.STRING, 
             allowNull: false,
             validdate: {
                 len: [1]
