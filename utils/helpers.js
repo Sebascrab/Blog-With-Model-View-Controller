@@ -4,11 +4,11 @@
 // creating helpers for handlebars:
 module.exports = {
     // helper for formating words multiple
-    format_plural: (word, amount) => {
+    format_plural: (words, amount) => {
         if (amount !==1) {
             return `${words}s`;
         }
-        return word;
+        return words;
     },
     // helper to return timestamp:
     format_date: date => {

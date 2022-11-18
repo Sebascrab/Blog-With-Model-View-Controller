@@ -42,7 +42,7 @@ app.use(session(sess));
 
 // middleware for parsing json;
 app.use(express.json());
-app.use(express.urlencoded({ extended: true}));
+app.use(express.urlencoded({ extended: false}));
 
 // connecting public folder:
 app.use(express.static(path.join(__dirname, 'public')));
@@ -54,7 +54,11 @@ app.set('view engine', 'handlebars');
 app.use(routes);
 
 // connecting for display in local server: 
-sequelize.sync({ force: false }).then(() => {
-    app.listen(PORT, () => console.log('Now listening...'));
-})
+// sequelize.sync({ force: false }).then(() => {
+//     app.listen(PORT, () => console.log('Now listening...'));
+// })
 
+app.listen(PORT, () => {
+    console.log(`App listening on port ${PORT}!`);
+    sequelize.sync({ force: false });
+  });

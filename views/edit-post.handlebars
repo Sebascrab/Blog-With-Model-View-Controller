@@ -5,7 +5,7 @@
       <div class="hero is-large">
           <a href="/dashboard" class="is-pulled-right">Back To Dashboard</a>
         <h1 class="is-size-1 has-text-centered has-text-weight-bold">Edit Post</h1>
-          <div class="hero-body columns" class="edit-post-form">
+          <form class="hero-body columns edit-post-form">
               <div class="column is-two-thirds is-flex is-flex-direction-column box has-background-info-light">
                   <div class="label">
                       <label for="post-title"> Post Title:</label>
@@ -24,10 +24,12 @@
                       <button type="button" class="button has-background-info-dark has-text-success-light is-pulled-right delete-post-btn">Delete Post</button>
                   </div>
               </div>
-          </div>
+          </form>
       </div>
   </div>
 
-  <script src="/javascript/edit-post.js"></script>
-  <script src="/javascript/delete-post.js"></script>
-  <script src="/javascript/comment.js"></script>
+  {{> comments post.comments}}
+
+  <script src="/js/edit-post.js"></script>
+  <script src="/js/delete-post.js"></script>
+  {{!-- <script src="/js/comment.js"></script> --}}

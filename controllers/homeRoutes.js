@@ -17,7 +17,12 @@ router.get('/login', (req, res) => {
     res.render('login');
 });
 
+router.get('/post', (req, res) => {
 
+    res.render('create-post', {
+        loggedIn: req.session.loggedIn
+    });
+})
 
 // Get request for signup info:
 router.get('/signup', (req, res) => {
