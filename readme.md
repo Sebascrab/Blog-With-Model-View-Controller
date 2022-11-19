@@ -7,6 +7,8 @@
 
   * [Installation](#installation) 
 
+  * [Contributors](#contributors) 
+
   * [Usage](#usage) 
 
   * [Tests](#tests) 
@@ -21,8 +23,9 @@
   ## Installation 
 
   no installation!
-  
-  none
+  ## Contributors 
+
+  non
   ## Usage 
 
   Sign up, log in, and start posting.  
