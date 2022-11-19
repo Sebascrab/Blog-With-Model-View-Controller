@@ -4,16 +4,12 @@
 
 <form class="comment-form">
     <div>
-        <textarea class="ml-5" name="comment-body"></textarea>
+        <textarea class="ml-5" name="comment-body has-text-dark"></textarea>
     </div>
-
-
-<div class="column">
-    <button id="sign-up-button" class="button has-background-info-dark has-text-success-light is-fullwidth"
-        type="submit">Add Comment</button>
-</div>
-
-
+    <div class="column">
+        <button id="sign-up-button" class="button has-background-info-dark has-text-success-light " type="submit">Add
+            Comment</button>
+    </div>
 </form>
 {{/if}}
 {{> comments post.comments}}

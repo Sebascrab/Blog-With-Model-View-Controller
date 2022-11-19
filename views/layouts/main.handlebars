@@ -19,17 +19,22 @@
           </a>
         </div>
         {{#if loggedIn}}
-            <a href="/" class="navbar-item is-hoverable pt-1">Home</a>
-            <a href="/dashboard" class="navbar-item is-hoverable pt-1">Dashboard</a>
-            <a href="/dashboard/create/" class="navbar-item is-hoverable pt-1 mr-4">Create A Post</a>
-            <button id="logout" class="button is-info">logout</button>
+            <a href="/" class="navbar-item is-hoverable pt-1 has-text-info-light">Home</a>
+            <a href="/dashboard" class="navbar-item is-hoverable pt-1  has-text-info-light">Dashboard</a>
+            <a href="/dashboard/create/" class="navbar-item is-hoverable pt-1 mr-4  has-text-info-light">Create A Post</a>
+            <button id="logout" class=" button pt-1 mr-4 has-background-danger has-text-info-light">logout</button>
             {{else}}
-            <a href="/" class="navbar-item is-hoverable pt-1">Homepage</a>
-            <a href="/login" class="navbar-item is-info-light pt-1">Login</a>
+            <a href="/" class="navbar-item is-hoverable has-text-info-light pt-1">Homepage</a>
+            <a href="/login" class="navbar-item has-text-info-light pt-1 ">Login</a>
             {{/if}}
       </nav>
+      <div class="container has-background-warning-light is-fullheight">
+        <div class="hero is-fullheight">
+          {{{body}}}
+        </div>
+      </div>
 
-      {{{body}}}
+      
 
       <footer class="footer has-background-info-dark">
         <div class="content has-text-info-light has-text-centered">
