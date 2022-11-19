@@ -41,7 +41,7 @@
 
   Email: alexanders.tischner@outlook.com 
 
-  [Image Of Application](/assets/images/Tech-Blog-Image.png)
+  ![Image Of Application](/assets/images/Tech-Blog-Image.png)
 
   
 
