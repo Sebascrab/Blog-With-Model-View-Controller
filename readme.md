@@ -42,6 +42,8 @@
   Email: alexanders.tischner@outlook.com 
 
   ![Image Of Application](/assets/images/Tech-Blog-Image.png)
+  
+  Deployed: https://sebastians-tech-blog.herokuapp.com/
 
   
 
