@@ -25,7 +25,7 @@
   no installation!
   ## Contributors 
 
-  non
+  none
   ## Usage 
 
   Sign up, log in, and start posting.  
